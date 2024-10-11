@@ -212,7 +212,7 @@ public class ServerList {
 				break;
 			}
 		}
-		ServerData customServer = new ServerData("NoBnoT", "wss://eagler.nobnot.org", false);
+		ServerData customServer = new ServerData("NoBnoT", "wss://eagler.nobnot.org", true);
 ServerList serverList = ServerList.getServerList();
 serverList.addServerData(customServer);
 
