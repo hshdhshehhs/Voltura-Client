@@ -101,7 +101,8 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			new ResourceLocation("textures/gui/title/background/panorama_2.png"),
 			new ResourceLocation("textures/gui/title/background/panorama_3.png"),
 			new ResourceLocation("textures/gui/title/background/panorama_4.png"),
-			new ResourceLocation("textures/gui/title/background/panorama_5.png") };
+			new ResourceLocation("textures/gui/title/background/panorama_5.png")
+			};
 	private int field_92024_r;
 	private int field_92023_s;
 	private int field_92022_t;
@@ -280,8 +281,14 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.addSingleplayerMultiplayerButtons(i, 24);
 		}
 
-		this.buttonList.add(new GuiButton(0, this.width / 2 - 100, i + 72 + 12, 98, 20,
-				I18n.format("menu.options", new Object[0])));
+		int buttonId = 0;
+this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 100, i + 72 + 12, 98, 20,
+                I18n.format("menu.options", new Object[0])));
+		
+				this.buttonList.add(new GuiButton(1, this.width / 2 - 100, i + 72 + 42, 98, 20,
+				I18n.format("AnimePictures", new Object[0])) {
+		});
+				
 		this.buttonList.add(new GuiButton(4, this.width / 2 + 2, i + 72 + 12, 98, 20,
 				I18n.format("menu.editProfile", new Object[0])));
 
@@ -384,10 +391,16 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 					EagRuntime.openLink(link);
 				} else {
 					UpdateService.quine();
+					
 				}
 			}
 		}
+		if (parGuiButton.id == 1) { // Change this to the actual id of the AnimeMode button
+			EagRuntime.openLink("https://in.pinterest.com/sarcaeus/anime-profile-pictures/");
+		}
 	}
+
+	
 
 	public void confirmClicked(boolean flag, int i) {
 		if (flag && i == 12) {
