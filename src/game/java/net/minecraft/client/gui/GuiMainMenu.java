@@ -266,34 +266,36 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 		} else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 31) {
 			this.splashText = "OOoooOOOoooo! Spooky!";
 		}
-
+	
 		int i = this.height / 4 + 48;
-
+	
 		boolean isFork = !EaglercraftVersion.projectOriginAuthor.equalsIgnoreCase(EaglercraftVersion.projectForkVendor);
-
+	
 		if (isFork && EaglercraftVersion.mainMenuStringF != null && EaglercraftVersion.mainMenuStringF.length() > 0) {
 			i += 11;
 		}
-
+	
 		if (this.mc.isDemo()) {
 			this.addDemoButtons(i, 24);
 		} else {
 			this.addSingleplayerMultiplayerButtons(i, 24);
 		}
-
+	
 		int buttonId = 0;
-this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 100, i + 72 + 12, 98, 20,
-                I18n.format("menu.options", new Object[0])));
-		
-				this.buttonList.add(new GuiButton(1, this.width / 2 - 100, i + 72 + 42, 98, 20,
-				I18n.format("AnimePictures", new Object[0])) {
+		this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 150, i + 72 + 12, 100, 20,
+				I18n.format("menu.options", new Object[0])));
+		this.buttonList.add(new GuiButton(17, this.width / 2 - 50, i + 72 + 12, 100, 20,
+				I18n.format("Discord", new Object[0])) {
+			
+			public void playPressSound(Minecraft mcIn) {
+				mcIn.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
+			}
 		});
-				
-		this.buttonList.add(new GuiButton(4, this.width / 2 + 2, i + 72 + 12, 98, 20,
+		this.buttonList.add(new GuiButton(4, this.width / 2 + 50, i + 72 + 12, 100, 20,
 				I18n.format("menu.editProfile", new Object[0])));
-
-		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, i + 72 + 12));
-
+	
+		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 150, i + 72 + 42));
+	
 		if (isFork) {
 			this.openGLWarning1 = EaglercraftVersion.mainMenuStringE;
 			this.openGLWarning2 = EaglercraftVersion.mainMenuStringF;
@@ -306,7 +308,7 @@ this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 100, i + 72 + 12,
 			this.field_92020_v = this.field_92022_t + j;
 			this.field_92019_w = this.field_92021_u + (line2 ? 24 : 11);
 		}
-
+	
 		this.mc.func_181537_a(false);
 	}
 
@@ -395,8 +397,8 @@ this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 100, i + 72 + 12,
 				}
 			}
 		}
-		if (parGuiButton.id == 1) { // Change this to the actual id of the AnimeMode button
-			EagRuntime.openLink("https://in.pinterest.com/sarcaeus/anime-profile-pictures/");
+		if (parGuiButton.id == 17) {
+			EagRuntime.openLink("https://discord.gg/Ewk4HBcz");
 		}
 	}
 
