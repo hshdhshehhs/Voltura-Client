@@ -101,7 +101,7 @@ public class GuiButton extends Gui {
 			if (!this.enabled) {
 				j = 10526880;
 			} else if (this.hovered) {
-				j = 16777120;
+				j = 0x0000FF;
 			}
 
 			if (fontScale == 1.0f) {
