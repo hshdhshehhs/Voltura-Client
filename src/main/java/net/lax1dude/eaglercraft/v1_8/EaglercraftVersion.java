@@ -51,7 +51,7 @@ public class EaglercraftVersion {
 	
 	// Miscellaneous variables:
 
-	public static final String mainMenuStringA = "Minecraft 1.8.8";
+	public static final String mainMenuStringA = "Voltura 0.1";
 	public static final String mainMenuStringB = projectOriginName + " " +
 			projectOriginRevision + "-" + projectOriginVersion + " ultimate";
 	public static final String mainMenuStringC = "";
@@ -69,6 +69,6 @@ public class EaglercraftVersion {
 
 	public static final boolean forceDemoMode = false;
 
-	public static final String localStorageNamespace = "_eaglercraftX";
+	public static final String localStorageNamespace = "Voltura";
 
 }

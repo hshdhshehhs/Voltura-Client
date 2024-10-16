@@ -281,10 +281,10 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.addSingleplayerMultiplayerButtons(i, 24);
 		}
 	
-		int buttonId = 0;
-		this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 150, i + 72 + 12, 100, 20,
+		int buttonId = 0; // 2 - 50, i + 72 + 12, 100, 20
+		this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 50, i + 72 + 12, 100, 20,
 				I18n.format("menu.options", new Object[0])));
-		this.buttonList.add(new GuiButton(17, this.width / 2 - 50, i + 72 + 12, 100, 20,
+		this.buttonList.add(new GuiButton(17, this.width / 2 - 150, i + 72 + 12, 100, 20,
 				I18n.format("Discord", new Object[0])) {
 			
 			public void playPressSound(Minecraft mcIn) {
