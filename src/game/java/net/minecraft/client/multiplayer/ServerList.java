@@ -212,11 +212,19 @@ public class ServerList {
 				break;
 			}
 		}
-		ServerData customServer = new ServerData("NoBnoT", "wss://eagler.nobnot.org", true);
-ServerList serverList = ServerList.getServerList();
-serverList.addServerData(customServer);
+		ServerList serverList = ServerList.getServerList();
 
-		serverlist.saveServerList();
+ServerData server1 = new ServerData("Arch", "wss://mc.arch.lol", true);
+ServerData server2 = new ServerData("VanillaMC", "wss://vanillamc.me", true);
+ServerData server3 = new ServerData("AssPixel", "wss://mc.asspixel.net", true);
+ServerData server4 = new ServerData("NobNoT", "wss://eagler.nobnot.org", true);
+
+serverList.addServerData(server1);
+serverList.addServerData(server2);
+serverList.addServerData(server3);
+serverList.addServerData(server4);
+
+serverList.saveServerList();
 	}
 
 	public void freeServerIcons() {
