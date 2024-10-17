@@ -17,6 +17,7 @@ import net.lax1dude.eaglercraft.v1_8.EaglerInputStream;
 import net.lax1dude.eaglercraft.v1_8.EaglercraftRandom;
 import net.lax1dude.eaglercraft.v1_8.EaglercraftVersion;
 import net.lax1dude.eaglercraft.v1_8.Mouse;
+import net.lax1dude.eaglercraft.v1_8.Display;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
@@ -595,7 +596,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.drawGradientRect(0, 0, this.width, this.height, 0, Integer.MIN_VALUE);
 		}
 		this.mc.getTextureManager().bindTexture(new ResourceLocation("background.png"));
-this.drawTexturedModalRect(0, 0, 0, 0, this.width, this.height);
+		this.drawTexturedModalRect(0, 0, 0, 0, Display.getWidth(), Display.getHeight());
 		this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		boolean minc = (double) this.updateCounter < 1.0E-4D;

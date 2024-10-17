@@ -2237,8 +2237,7 @@ public final class Maps {
 	 */
 	public static <K, V> SortedMap<K, V> filterKeys(SortedMap<K, V> unfiltered,
 			final Predicate<? super K> keyPredicate) {
-		// TODO(user): Return a subclass of Maps.FilteredKeyMap for slightly better
-		// performance.
+		
 		return filterEntries(unfiltered, Maps.<K>keyPredicateOnEntries(keyPredicate));
 	}
 
@@ -2280,8 +2279,7 @@ public final class Maps {
 	@GwtIncompatible("NavigableMap")
 	public static <K, V> NavigableMap<K, V> filterKeys(NavigableMap<K, V> unfiltered,
 			final Predicate<? super K> keyPredicate) {
-		// TODO(user): Return a subclass of Maps.FilteredKeyMap for slightly better
-		// performance.
+		
 		return filterEntries(unfiltered, Maps.<K>keyPredicateOnEntries(keyPredicate));
 	}
 
