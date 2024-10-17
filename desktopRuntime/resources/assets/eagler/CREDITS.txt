@@ -18,24 +18,24 @@ Discord Admin
 §bEaglercraftX §bDevelopers
  ~~~~~~~~~~~~~~~~~~~~~~~
 
- §blax1dude:
+ lax1dude:
  
-  §b- §bCreator §bof §bEaglercraft
-  §b- §bPorted §bthe §bMinecraft §b1.8 §bsrc §bto §bTeaVM
-  §b- §bWrote §bHW §baccelerated §bOpenGL §b1.3 §bemulator
-  §b- §bWrote §bthe §bdefault §bshader §bpack
-  §b- §bMade §bthe §bintegrated §bPBR §bresource §bpack
-  §b- §bWrote §ball §bdesktop §bemulation §bcode
-  §b- §bWrote §bEaglercraftXBungee
-  §b- §bWrote §bWebRTC §bRelay §bServer
-  §b- §bWrote §bthe §bpatch §band §bbuild §bsystem
+  - Creator of Eaglercraft
+  - Ported the Minecraft 1.8 src to TeaVM
+  - Wrote HW accelerated OpenGL 1.3 §bemulator
+  - Wrote the default shader §bpack
+  - Made the integrated PBR resource pack
+  - Wrote all desktop emulation code
+  - Wrote EaglercraftXBungee
+  - Wrote WebRTC Relay Server
+  - Wrote the patch and build system
  
- §bayunami2000:
+ ayunami2000:
  
-  §b- §bMany §bbug §bfixes
-  §b- §bWebRTC §bLAN §bworlds
-  §b- §bAdded §bresource §bpacks
-  §b- §bAdded §bscreen §brecording
-  §b- §bAdded §bseamless §bfullscreen
-  §b- §bCreated §bthe §breplit
+ - Many bug fixes
+  - WebRTC LAN worlds
+  - Added resource packs
+  - Added screen recording
+  - Added seamless fullscreen
+  - Created the replit
 

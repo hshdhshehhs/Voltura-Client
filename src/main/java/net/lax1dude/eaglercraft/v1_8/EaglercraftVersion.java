@@ -1,74 +1,78 @@
+
 package net.lax1dude.eaglercraft.v1_8;
 
 import java.math.BigInteger;
+import java.util.List;
 
 public class EaglercraftVersion {
-	
-	
-	//////////////////////////////////////////////////////////////////////
-	
-	/// Customize these to fit your fork:
-	
-	public static final String projectForkName = "EaglercraftX";
-	public static final String projectForkVersion = "u39";
-	public static final String projectForkVendor = "lax1dude";
-	
-	public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
-	
-	//////////////////////////////////////////////////////////////////////
-	
-	public static final String projectOriginName = "EaglercraftX";
-	public static final String projectOriginAuthor = "lax1dude";
-	public static final String projectOriginRevision = "1.8";
-	public static final String projectOriginVersion = "u39";
-	
-	public static final String projectOriginURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8"; // rest in peace
-	
-	// EPK Version Identifier
-	
-	public static final String EPKVersionIdentifier = "u39"; // Set to null to disable EPK version check
-	
-	// Updating configuration
-	
-	public static final boolean enableUpdateService = true;
 
-	public static final String updateBundlePackageName = "net.lax1dude.eaglercraft.v1_8.client";
-	public static final int updateBundlePackageVersionInt = 39;
+//////////////////////////////////////////////////////////////////////
 
-	public static final String updateLatestLocalStorageKey = "latestUpdate_" + updateBundlePackageName;
+/// Customize these to fit your fork:
 
-	// public key modulus for official 1.8 updates
-	public static final BigInteger updateSignatureModulus = new BigInteger("14419476194820052109078379102436982757438300194194974078260570958862225232043861026588258585967060437391326494976080031137298500457111529693806931143421725626747051503616606418909609840275122831550688481329699012469742002429706330734797679859799085213517354399295425740214330234086361416936984593337389989505613123225737002654977194421571825036717017788527234114501215218715499682638139386636103589791643964827904791195488978835113700772208317974307363542114867750505953323167521731238542123593257269990619007858952216110012513121779359926747737258698347806747854986471035713105133999027704095451858121831297923962641");
-	
-	
-	
-	// Client brand identification system configuration
-	
-	public static final EaglercraftUUID clientBrandUUID = EagUtils.makeClientBrandUUID(projectForkName);
+public static final String projectForkName = "Voltura Client";
+public static final String projectForkVersion = "1.0.0";
+public static final String projectForkVendor = "Namenotfound128";
 
-	public static final EaglercraftUUID legacyClientUUIDInSharedWorld = EagUtils.makeClientBrandUUIDLegacy(projectOriginName);
-	
-	
-	// Miscellaneous variables:
+public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
 
-	public static final String mainMenuStringA = "Voltura 0.1";
-	public static final String mainMenuStringB = projectOriginName + " " +
-			projectOriginRevision + "-" + projectOriginVersion + " ultimate";
-	public static final String mainMenuStringC = "";
-	public static final String mainMenuStringD = "Resources Copyright Mojang AB";
+//////////////////////////////////////////////////////////////////////
 
-	public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
-	public static final String mainMenuStringF = "Made by " + projectForkVendor;
+public static final String projectOriginName = "EaglercraftX";
+public static final String projectOriginAuthor = "lax1dude";
+public static final String projectOriginRevision = "1.9";
+public static final String projectOriginVersion = "1.0.0";
 
-	public static final String mainMenuStringG = "Collector's Edition";
-	public static final String mainMenuStringH = "PBR Shaders";
+public static final String projectOriginURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8"; // rest in peace
 
-	public static final long demoWorldSeed = (long) "North Carolina".hashCode();
+// EPK Version Identifier
 
-	public static final boolean mainMenuEnableGithubButton = false;
+public static final String EPKVersionIdentifier = "u39"; // Set to null to disable EPK version check
 
-	public static final boolean forceDemoMode = false;
+// Updating configuration
 
-	public static final String localStorageNamespace = "Voltura";
+public static final boolean enableUpdateService = true;
 
+public static final List<String> updateURLs = List.of(
+"https://hoosiertransfer.net/eaglerLcert",
+"https://temuzx.xyz/eaglerLcert",
+"https://eagler.xyz/eaglerLcert",
+"https://hoosiertransfer.xyz/eaglerLcert");
+
+public static final String updateBundlePackageName = "net.lax1dude.eaglercraft.v1_8.client";
+public static final int updateBundlePackageVersionInt = 3;
+
+public static final String updateLatestLocalStorageKey = "latestUpdate_" + updateBundlePackageName;
+
+// public key modulus for official 1.8 updates
+public static final BigInteger updateSignatureModulus = new BigInteger(
+"9934844152704206425984038360710846195785255499658630347555679233517037320419089417353684680137701223265944443284321705629368787894053054988233896240570752560271396448764359123258518818693879688207544671033079915029195517675413202427147319375331350380376604266826560830299822638274516845927247015696509586216934495843289602444650044805651410710164106192952455213102521880119736500301420208590760465989706511018182601545217390196438291842825959549203290633490664834390313090964927686415922400638755956780717898579080985306487440294133874610155281675147758926351882699414541707391045631732309999601681661304360813629331");
+
+// Client brand identification system configuration
+
+public static final EaglercraftUUID clientBrandUUID = EagUtils.makeClientBrandUUID(projectForkName);
+
+public static final EaglercraftUUID legacyClientUUIDInSharedWorld = EagUtils.makeClientBrandUUIDLegacy(projectOriginName);
+
+// Miscellaneous variables:
+
+public static final String mainMenuStringA = "Voltura 1.0.0";
+public static final String mainMenuStringB = projectOriginName + " " +
+projectOriginRevision + "-" + projectOriginVersion + " ultimate";
+public static final String mainMenuStringC = "";
+public static final String mainMenuStringD = "Resources Copyright Mojang AB";
+
+public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
+public static final String mainMenuStringF = "Made by " + projectForkVendor;
+
+public static final String mainMenuStringG = "Collector's Edition";
+public static final String mainMenuStringH = "PBR Shaders";
+
+public static final long demoWorldSeed = (long) "North Carolina".hashCode();
+
+public static final boolean mainMenuEnableGithubButton = false;
+
+public static final boolean forceDemoMode = false;
+
+public static final String localStorageNamespace = "_eaglercraftX";
 }

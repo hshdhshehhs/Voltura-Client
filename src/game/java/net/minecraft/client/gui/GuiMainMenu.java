@@ -594,6 +594,8 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.drawGradientRect(0, 0, this.width, this.height, -2130706433, 16777215);
 			this.drawGradientRect(0, 0, this.width, this.height, 0, Integer.MIN_VALUE);
 		}
+		this.mc.getTextureManager().bindTexture(new ResourceLocation("background.png"));
+this.drawTexturedModalRect(0, 0, 0, 0, this.width, this.height);
 		this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		boolean minc = (double) this.updateCounter < 1.0E-4D;
