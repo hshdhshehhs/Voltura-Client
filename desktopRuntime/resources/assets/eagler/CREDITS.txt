@@ -1,21 +1,15 @@
-
-
 Voltura Staff
 ~~~~~~~~~~~~~
 Namenotfound:
 ~~~~~~~~~~~~~
--Main Modules
+-All the Code
 
-OperaMini
-~~~~~~~~~
-A Owner of Voltura
-in the discord
 
 the_cool2
 ~~~~~~~~~
 Discord Admin
 
-§bEaglercraftX §bDevelopers
+EaglercraftX Developers
  ~~~~~~~~~~~~~~~~~~~~~~~
 
  lax1dude:

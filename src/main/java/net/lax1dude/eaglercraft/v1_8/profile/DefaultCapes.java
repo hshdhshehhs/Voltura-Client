@@ -22,7 +22,7 @@ public enum DefaultCapes {
 	NO_CAPE(0, "No Cape", null),
 	MINECON_2011(1, "Fire1", new ResourceLocation("eagler:capes/01.minecon_2011.png")),
 	MINECON_2012(2, "Fire2", new ResourceLocation("eagler:capes/02.minecon_2012.png")),
-	MINECON_2013(3, "Soon", new ResourceLocation("eagler:capes/02.minecon_2012.png"));
+	MINECON_2013(3, "Noob", new ResourceLocation("eagler:capes/Noob.png"));
 
 	
 	public static final DefaultCapes[] defaultCapesMap = new DefaultCapes[2];
