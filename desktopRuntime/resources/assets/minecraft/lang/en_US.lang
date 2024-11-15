@@ -34,8 +34,8 @@ eaglercraft.menu.openToLan=Invite
 eaglercraft.menu.closeLan=Stop Sharing
 
 eaglercraft.editProfile.title=Edit Profile
-eaglercraft.editProfile.username=Username
-eaglercraft.editProfile.playerSkin=Player Skin
+eaglercraft.editProfile.username=User
+eaglercraft.editProfile.playerSkin=Skin
 eaglercraft.editProfile.addSkin=Add Skin
 eaglercraft.editProfile.clearSkin=Clear List
 eaglercraft.editProfile.capes=Capes

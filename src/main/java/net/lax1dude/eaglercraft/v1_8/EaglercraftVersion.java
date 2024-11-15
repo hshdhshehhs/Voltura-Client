@@ -11,7 +11,7 @@ public class EaglercraftVersion {
 /// Customize these to fit your fork:
 
 public static final String projectForkName = "Voltura Client";
-public static final String projectForkVersion = "1.0.0";
+public static final String projectForkVersion = "2.0.0";
 public static final String projectForkVendor = "Namenotfound128";
 
 public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
@@ -20,14 +20,14 @@ public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglerc
 
 public static final String projectOriginName = "EaglercraftX";
 public static final String projectOriginAuthor = "lax1dude";
-public static final String projectOriginRevision = "1.9";
-public static final String projectOriginVersion = "1.0.0";
+public static final String projectOriginRevision = "1.8";
+public static final String projectOriginVersion = "u40";
 
 public static final String projectOriginURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8"; // rest in peace
 
 // EPK Version Identifier
 
-public static final String EPKVersionIdentifier = "u39"; // Set to null to disable EPK version check
+public static final String EPKVersionIdentifier = "null"; // Set to null to disable EPK version check
 
 // Updating configuration
 
@@ -56,7 +56,7 @@ public static final EaglercraftUUID legacyClientUUIDInSharedWorld = EagUtils.mak
 
 // Miscellaneous variables:
 
-public static final String mainMenuStringA = "Voltura 1.0.0";
+public static final String mainMenuStringA = "Voltura 2.0.0";
 public static final String mainMenuStringB = projectOriginName + " " +
 projectOriginRevision + "-" + projectOriginVersion + " ultimate";
 public static final String mainMenuStringC = "";
@@ -65,8 +65,8 @@ public static final String mainMenuStringD = "Resources Copyright Mojang AB";
 public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
 public static final String mainMenuStringF = "Made by " + projectForkVendor;
 
-public static final String mainMenuStringG = "Collector's Edition";
-public static final String mainMenuStringH = "PBR Shaders";
+public static final String mainMenuStringG = "Balls";
+public static final String mainMenuStringH = ":D";
 
 public static final long demoWorldSeed = (long) "North Carolina".hashCode();
 

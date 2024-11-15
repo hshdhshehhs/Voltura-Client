@@ -282,9 +282,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.addSingleplayerMultiplayerButtons(i, 24);
 		}
 	
-		int buttonId = 0; // 2 - 50, i + 72 + 12, 100, 20
+		int buttonId = 0; 
 		this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 50, i + 72 + 12, 100, 20,
-				I18n.format("menu.options", new Object[0])));
+				"Settings"));
 		this.buttonList.add(new GuiButton(17, this.width / 2 - 150, i + 72 + 12, 100, 20,
 				I18n.format("Discord", new Object[0])) {
 			
@@ -293,7 +293,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			}
 		});
 		this.buttonList.add(new GuiButton(4, this.width / 2 + 50, i + 72 + 12, 100, 20,
-				I18n.format("menu.editProfile", new Object[0])));
+				"Profile"));
 	
 		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 150, i + 72 + 42));
 	
@@ -319,9 +319,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 */
 	private void addSingleplayerMultiplayerButtons(int parInt1, int parInt2) {
 		this.buttonList
-				.add(new GuiButton(1, this.width / 2 - 100, parInt1, I18n.format("menu.singleplayer", new Object[0])));
-		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, parInt1 + parInt2 * 1,
-				I18n.format("menu.multiplayer", new Object[0])));
+				.add(new GuiButton(1, this.width / 2 - 100, parInt1, "Single")); // 2
+		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, parInt1 + parInt2 * 1, // 2
+				"Multi"));
 		if (EaglercraftVersion.mainMenuEnableGithubButton) {
 			this.buttonList.add(
 					new GuiButton(14, this.width / 2 - 100, parInt1 + parInt2 * 2, I18n.format("menu.forkOnGitlab")));
@@ -399,7 +399,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			}
 		}
 		if (parGuiButton.id == 17) {
-			EagRuntime.openLink("https://discord.gg/Ewk4HBcz");
+			EagRuntime.openLink("https://discord.gg/x3Z39HpnPS");
 		}
 	}
 
@@ -595,8 +595,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.drawGradientRect(0, 0, this.width, this.height, -2130706433, 16777215);
 			this.drawGradientRect(0, 0, this.width, this.height, 0, Integer.MIN_VALUE);
 		}
-		this.mc.getTextureManager().bindTexture(new ResourceLocation("background.png"));
-		this.drawTexturedModalRect(0, 0, 0, 0, Display.getWidth(), Display.getHeight());
+		
 		this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		boolean minc = (double) this.updateCounter < 1.0E-4D;
@@ -708,7 +707,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			GlStateManager.popMatrix();
 		}
 
-		String lbl = "CREDITS.txt";
+		String lbl = "credits";
 		int w = fontRendererObj.getStringWidth(lbl) * 3 / 4;
 
 		if (i >= (this.width - w - 4) && i <= this.width && j >= 0 && j <= 9) {
@@ -734,7 +733,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 */
 	protected void mouseClicked(int par1, int par2, int par3) {
 		if (par3 == 0) {
-			String lbl = "CREDITS.txt";
+			String lbl = "credits";
 			int w = fontRendererObj.getStringWidth(lbl) * 3 / 4;
 			if (par1 >= (this.width - w - 4) && par1 <= this.width && par2 >= 0 && par2 <= 10) {
 				String resStr = EagRuntime.getResourceString("/assets/eagler/CREDITS.txt");
