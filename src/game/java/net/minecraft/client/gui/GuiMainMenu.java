@@ -17,7 +17,6 @@ import net.lax1dude.eaglercraft.v1_8.EaglerInputStream;
 import net.lax1dude.eaglercraft.v1_8.EaglercraftRandom;
 import net.lax1dude.eaglercraft.v1_8.EaglercraftVersion;
 import net.lax1dude.eaglercraft.v1_8.Mouse;
-import net.lax1dude.eaglercraft.v1_8.Display;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
@@ -102,8 +101,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			new ResourceLocation("textures/gui/title/background/panorama_2.png"),
 			new ResourceLocation("textures/gui/title/background/panorama_3.png"),
 			new ResourceLocation("textures/gui/title/background/panorama_4.png"),
-			new ResourceLocation("textures/gui/title/background/panorama_5.png")
-			};
+			new ResourceLocation("textures/gui/title/background/panorama_5.png") };
 	private int field_92024_r;
 	private int field_92023_s;
 	private int field_92022_t;
@@ -267,36 +265,28 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 		} else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 31) {
 			this.splashText = "OOoooOOOoooo! Spooky!";
 		}
-	
+
 		int i = this.height / 4 + 48;
-	
+
 		boolean isFork = !EaglercraftVersion.projectOriginAuthor.equalsIgnoreCase(EaglercraftVersion.projectForkVendor);
-	
+
 		if (isFork && EaglercraftVersion.mainMenuStringF != null && EaglercraftVersion.mainMenuStringF.length() > 0) {
 			i += 11;
 		}
-	
+
 		if (this.mc.isDemo()) {
 			this.addDemoButtons(i, 24);
 		} else {
 			this.addSingleplayerMultiplayerButtons(i, 24);
 		}
-	
-		int buttonId = 0; 
-		this.buttonList.add(new GuiButton(buttonId++, this.width / 2 - 50, i + 72 + 12, 100, 20,
-				"Settings"));
-		this.buttonList.add(new GuiButton(17, this.width / 2 - 150, i + 72 + 12, 100, 20,
-				I18n.format("Discord", new Object[0])) {
-			
-			public void playPressSound(Minecraft mcIn) {
-				mcIn.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
-			}
-		});
-		this.buttonList.add(new GuiButton(4, this.width / 2 + 50, i + 72 + 12, 100, 20,
-				"Profile"));
-	
-		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 150, i + 72 + 42));
-	
+
+		this.buttonList.add(new GuiButton(0, this.width / 2 - 100, i + 72 + 12, 98, 20,
+				I18n.format("menu.options", new Object[0])));
+		this.buttonList.add(new GuiButton(4, this.width / 2 + 2, i + 72 + 12, 98, 20,
+				I18n.format("menu.editProfile", new Object[0])));
+
+		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, i + 72 + 12));
+
 		if (isFork) {
 			this.openGLWarning1 = EaglercraftVersion.mainMenuStringE;
 			this.openGLWarning2 = EaglercraftVersion.mainMenuStringF;
@@ -309,7 +299,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.field_92020_v = this.field_92022_t + j;
 			this.field_92019_w = this.field_92021_u + (line2 ? 24 : 11);
 		}
-	
+
 		this.mc.func_181537_a(false);
 	}
 
@@ -319,9 +309,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 */
 	private void addSingleplayerMultiplayerButtons(int parInt1, int parInt2) {
 		this.buttonList
-				.add(new GuiButton(1, this.width / 2 - 100, parInt1, "Single")); // 2
-		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, parInt1 + parInt2 * 1, // 2
-				"Multi"));
+				.add(new GuiButton(1, this.width / 2 - 100, parInt1, "Single Player"));  
+		this.buttonList.add(new GuiButton(2, this.width / 2 - 60, parInt1 + parInt2 * 1,  
+				"Multi Player"));
 		if (EaglercraftVersion.mainMenuEnableGithubButton) {
 			this.buttonList.add(
 					new GuiButton(14, this.width / 2 - 100, parInt1 + parInt2 * 2, I18n.format("menu.forkOnGitlab")));
@@ -394,16 +384,10 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 					EagRuntime.openLink(link);
 				} else {
 					UpdateService.quine();
-					
 				}
 			}
 		}
-		if (parGuiButton.id == 17) {
-			EagRuntime.openLink("https://discord.gg/x3Z39HpnPS");
-		}
 	}
-
-	
 
 	public void confirmClicked(boolean flag, int i) {
 		if (flag && i == 12) {
@@ -595,7 +579,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 			this.drawGradientRect(0, 0, this.width, this.height, -2130706433, 16777215);
 			this.drawGradientRect(0, 0, this.width, this.height, 0, Integer.MIN_VALUE);
 		}
-		
 		this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		boolean minc = (double) this.updateCounter < 1.0E-4D;
@@ -733,7 +716,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 */
 	protected void mouseClicked(int par1, int par2, int par3) {
 		if (par3 == 0) {
-			String lbl = "credits";
+			String lbl = "Credits.";
 			int w = fontRendererObj.getStringWidth(lbl) * 3 / 4;
 			if (par1 >= (this.width - w - 4) && par1 <= this.width && par2 >= 0 && par2 <= 10) {
 				String resStr = EagRuntime.getResourceString("/assets/eagler/CREDITS.txt");
