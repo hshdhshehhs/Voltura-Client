@@ -281,9 +281,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 		}
 
 		this.buttonList.add(new GuiButton(0, this.width / 2 - 100, i + 72 + 12, 98, 20,
-				I18n.format("menu.options", new Object[0])));
+				"Options"));
 		this.buttonList.add(new GuiButton(4, this.width / 2 + 2, i + 72 + 12, 98, 20,
-				I18n.format("menu.editProfile", new Object[0])));
+				"Profile"));
 
 		this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, i + 72 + 12));
 
@@ -308,10 +308,10 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 * players who have bought the game.
 	 */
 	private void addSingleplayerMultiplayerButtons(int parInt1, int parInt2) {
-		this.buttonList
-				.add(new GuiButton(1, this.width / 2 - 100, parInt1, "Single Player"));  
-		this.buttonList.add(new GuiButton(2, this.width / 2 - 60, parInt1 + parInt2 * 1,  
-				"Multi Player"));
+		                         // 2 - 100
+		this.buttonList.add(new GuiButton(1, this.width / 2 - 100, parInt1, "Singleplayer"));  
+		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, parInt1 + parInt2 * 1,  
+				"Multiplayer"));
 		if (EaglercraftVersion.mainMenuEnableGithubButton) {
 			this.buttonList.add(
 					new GuiButton(14, this.width / 2 - 100, parInt1 + parInt2 * 2, I18n.format("menu.forkOnGitlab")));
@@ -566,11 +566,13 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 	 */
 	public void drawScreen(int i, int j, float f) {
 		GlStateManager.disableAlpha();
-		if (enableBlur) {
-			this.renderSkybox(i, j, f);
-		} else {
-			this.drawPanorama(i, j, f);
-		}
+//		if (enableBlur) {
+//			this.renderSkybox(i, j, f);
+//		} else {
+//			this.drawPanorama(i, j, f);
+//		}
+this.mc.getTextureManager().bindTexture(new ResourceLocation("textures/gui/Custom_Background.png"));
+this.drawTexturedModalRect(0, 0, this.width, this.height, this.width, this.height);           
 		GlStateManager.enableAlpha();
 		short short1 = 274;
 		int k = this.width / 2 - short1 / 2;
