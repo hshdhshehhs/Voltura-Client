@@ -31,6 +31,8 @@ import org.apache.commons.lang3.Validate;
 
 import com.google.common.collect.Lists;
 
+import me.namenotfound128.voltura.Voltura;
+import me.namenotfound128.voltura.mod.ModManager;
 import net.lax1dude.eaglercraft.v1_8.futures.Executors;
 import net.lax1dude.eaglercraft.v1_8.futures.FutureTask;
 import net.lax1dude.eaglercraft.v1_8.futures.ListenableFuture;
@@ -235,7 +237,7 @@ public class Minecraft implements IThreadListener {
 	public int displayHeight;
 	public float displayDPI;
 	private boolean field_181541_X = false;
-	private Timer timer = new Timer(20.0F);
+	public Timer timer = new Timer(20.0F);
 	public WorldClient theWorld;
 	public RenderGlobal renderGlobal;
 	private RenderManager renderManager;
@@ -496,6 +498,11 @@ public class Minecraft implements IThreadListener {
 		this.effectRenderer = new EffectRenderer(this.theWorld, this.renderEngine);
 		SkinPreviewRenderer.initialize();
 		this.checkGLError("Post startup");
+
+		// START PATCH
+		Voltura.init();
+		// END PATCH
+
 		this.ingameGUI = new GuiIngame(this);
 
 		this.mouseGrabSupported = Mouse.isMouseGrabSupported();
@@ -1158,6 +1165,9 @@ public class Minecraft implements IThreadListener {
 			--this.rightClickDelayTimer;
 		}
 
+		// PATCH START
+		Voltura.tick();
+		// PATCH END
 		RateLimitTracker.tick();
 
 		boolean isHostingLAN = LANServerController.isHostingLAN();
@@ -1332,6 +1342,9 @@ public class Minecraft implements IThreadListener {
 					int i = Mouse.getEventButton();
 					KeyBinding.setKeyBindState(i - 100, Mouse.getEventButtonState());
 					if (Mouse.getEventButtonState()) {
+						// PATCH START
+						ModManager.mouseClicked(i);
+						// PATCH END
 						PointerInputAbstraction.enterMouseModeHook();
 						if (this.thePlayer.isSpectator() && i == 2) {
 							this.ingameGUI.getSpectatorGui().func_175261_b();
@@ -1395,6 +1408,10 @@ public class Minecraft implements IThreadListener {
 				if (Keyboard.getEventKeyState()) {
 					KeyBinding.onTick(k);
 				}
+
+				// PATCH START
+				ModManager.key(k);
+				// PATCH END
 
 				if (this.debugCrashKeyPressTime > 0L) {
 					if (getSystemTime() - this.debugCrashKeyPressTime >= 6000L) {
