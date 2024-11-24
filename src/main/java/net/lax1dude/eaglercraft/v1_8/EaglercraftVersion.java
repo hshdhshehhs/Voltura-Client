@@ -11,7 +11,7 @@ public class EaglercraftVersion {
 /// Customize these to fit your fork:
 
 public static final String projectForkName = "Voltura Client";
-public static final String projectForkVersion = "2.0.0";
+public static final String projectForkVersion = "3.0.0";
 public static final String projectForkVendor = "Namenotfound128";
 
 public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
@@ -60,7 +60,7 @@ public static final String mainMenuStringA = "Voltura 2.0.0";
 public static final String mainMenuStringB = projectOriginName + " " +
 projectOriginRevision + "-" + projectOriginVersion + " ultimate";
 public static final String mainMenuStringC = "Resources Copyright Mojang AB";
-public static final String mainMenuStringD = "Credit PixelClient sources, Copyright Jakob 2024"; // Don't remove
+public static final String mainMenuStringD = "Credit Mod Sources, Copyright Jakob 2024"; // Don't remove
 
 public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
 public static final String mainMenuStringF = "Made by " + projectForkVendor;
