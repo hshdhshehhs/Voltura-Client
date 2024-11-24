@@ -16,6 +16,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
+import me.namenotfound128.voltura.mod.ModManager;
 import net.lax1dude.eaglercraft.v1_8.opengl.GlStateManager;
 import net.lax1dude.eaglercraft.v1_8.opengl.OpenGlHelper;
 import net.lax1dude.eaglercraft.v1_8.opengl.WorldRenderer;
@@ -326,6 +327,10 @@ public class GuiIngame extends Gui {
 
 		GlStateManager.disableLighting();
 		GlStateManager.enableAlpha();
+
+		// PATCH START
+		ModManager.render();
+		// PATCH END
 	}
 
 	public void renderGameOverlayCrosshairs(int scaledResWidth, int scaledResHeight) {

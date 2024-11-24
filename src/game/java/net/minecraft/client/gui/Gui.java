@@ -39,9 +39,9 @@ public class Gui {
 	/**+
 	 * Draw a 1 pixel wide horizontal line. Args: x1, x2, y, color
 	 */
-	protected void drawHorizontalLine(int startX, int endX, int y, int color) {
+	/*PATCH START*/public/*PATCH END*/ void drawHorizontalLine(double startX, double endX, double y, int color) {
 		if (endX < startX) {
-			int i = startX;
+			double i = startX;
 			startX = endX;
 			endX = i;
 		}
@@ -52,9 +52,9 @@ public class Gui {
 	/**+
 	 * Draw a 1 pixel wide vertical line. Args : x, y1, y2, color
 	 */
-	protected void drawVerticalLine(int x, int startY, int endY, int color) {
+	/*PATCH START*/public/*PATCH END*/ void drawVerticalLine(double x, double startY, double endY, int color) {
 		if (endY < startY) {
-			int i = startY;
+			double i = startY;
 			startY = endY;
 			endY = i;
 		}
@@ -66,15 +66,15 @@ public class Gui {
 	 * Draws a solid color rectangle with the specified coordinates
 	 * and color (ARGB format). Args: x1, y1, x2, y2, color
 	 */
-	public static void drawRect(int left, int top, int right, int bottom, int color) {
+	public static void drawRect(double left, double top, double right, double bottom, int color) {
 		if (left < right) {
-			int i = left;
+			double i = left;
 			left = right;
 			right = i;
 		}
 
 		if (top < bottom) {
-			int j = top;
+			double j = top;
 			top = bottom;
 			bottom = j;
 		}

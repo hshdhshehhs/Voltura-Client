@@ -218,6 +218,10 @@ public class GameSettings {
 	public float voiceSpeakVolume = 0.5f;
 	public int voicePTTKey = 47; // V
 
+	// PATCH START
+	public final KeyBinding keyOpenModPositionEditor = new KeyBinding("Open Position Editor", KeyboardConstants.KEY_RSHIFT, "Voltura");
+	// PATCH END
+
 	public EnumScreenRecordingCodec screenRecordCodec;
 	public int screenRecordFPS = ScreenRecordingController.DEFAULT_FPS;
 	public int screenRecordResolution = ScreenRecordingController.DEFAULT_RESOLUTION;
@@ -242,10 +246,21 @@ public class GameSettings {
 		this.language = EagRuntime.getConfiguration().getDefaultLocale();
 		this.forceUnicodeFont = false;
 		this.mc = mcIn;
+
+		// PATCH START
+		injectKeybinds();
+		// PATCH END
+
 		this.renderDistanceChunks = 4;
 		this.screenRecordCodec = ScreenRecordingController.getDefaultCodec();
 		this.loadOptions();
 	}
+
+	// PATCH START
+	private void injectKeybinds() {
+		this.keyBindings = ArrayUtils.addAll(new KeyBinding[]{this.keyOpenModPositionEditor}, this.keyBindings);
+	}
+	// PATCH END
 
 	/**+
 	 * Represents a key or mouse button as a string. Args: key

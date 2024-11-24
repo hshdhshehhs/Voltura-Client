@@ -10,6 +10,7 @@ import net.lax1dude.eaglercraft.v1_8.profanity_filter.ProfanityFilter;
 
 import java.util.concurrent.Callable;
 
+import me.namenotfound128.voltura.mod.ModManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
@@ -284,6 +285,7 @@ public abstract class Entity implements ICommandSender {
 	 * degrees.
 	 */
 	public void setAngles(float yaw, float pitch) {
+		ModManager.keystrokesMod.mouse(yaw, pitch);
 		float f = this.rotationPitch;
 		float f1 = this.rotationYaw;
 		this.rotationYaw = (float) ((double) this.rotationYaw + (double) yaw * 0.15D);
