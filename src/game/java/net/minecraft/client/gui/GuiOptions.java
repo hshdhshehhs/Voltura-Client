@@ -27,6 +27,7 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
+import me.namenotfound128.voltura.other.GuiVoltura;
 
 /**+
  * This portion of EaglercraftX contains deobfuscated Minecraft 1.8 source code.
@@ -129,8 +130,8 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback {
 		this.buttonList.add(btn = new GuiButton(105, this.width / 2 - 155, this.height / 6 + 144 - 6, 150, 20,
 				"Texture Packs"));
 		btn.enabled = EaglerFolderResourcePack.isSupported();
-		this.buttonList.add(btn = new GuiButton(104, this.width / 2 + 5, this.height / 6 + 144 - 6, 150, 20,
-				"Debug"));
+				this.buttonList.add(btn = new GuiButton(110, this.width / 2 + 5, this.height / 6 + 144 - 6, 150, 20,
+				"Voltura Mods"));
 		btn.enabled = EagRuntime.getPlatformType() != EnumPlatformType.DESKTOP;
 		this.buttonList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168,
 				"Finished"));
@@ -209,6 +210,8 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback {
 				this.mc.displayGuiScreen(new GuiVideoSettings(this, this.game_settings_1));
 			}
 
+
+
 			if (parGuiButton.id == 100) {
 				this.mc.gameSettings.saveOptions();
 				this.mc.displayGuiScreen(new GuiControls(this, this.game_settings_1));
@@ -249,8 +252,9 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback {
 				}
 			}
 
-			if (parGuiButton.id == 104) {
-				EagRuntime.showDebugConsole();
+			
+			if (parGuiButton.id == 110) {
+				this.mc.displayGuiScreen(new GuiVoltura());
 			}
 		}
 	}
