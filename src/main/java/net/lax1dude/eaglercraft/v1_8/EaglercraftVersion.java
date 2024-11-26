@@ -14,7 +14,7 @@ public static final String projectForkName = "Voltura Client";
 public static final String projectForkVersion = "3.0.0";
 public static final String projectForkVendor = "Namenotfound128";
 
-public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
+public static final String projectForkURL = "https://github.com/Notchripoff/Voltura-Client";
 
 //////////////////////////////////////////////////////////////////////
 
@@ -59,18 +59,18 @@ public static final EaglercraftUUID legacyClientUUIDInSharedWorld = EagUtils.mak
 public static final String mainMenuStringA = "Voltura 2.0.0";
 public static final String mainMenuStringB = projectOriginName + " " +
 projectOriginRevision + "-" + projectOriginVersion + " ultimate";
-public static final String mainMenuStringC = "Resources Copyright Mojang AB";
+public static final String mainMenuStringC = "Copyright Mojang";
 public static final String mainMenuStringD = "Credit Mod Sources, Copyright Jakob 2024"; // Don't remove
 
 public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
 public static final String mainMenuStringF = "Made by " + projectForkVendor;
 
-public static final String mainMenuStringG = "Balls";
-public static final String mainMenuStringH = ":D";
+public static final String mainMenuStringG = "Voltura";
+public static final String mainMenuStringH = "Client";
 
 public static final long demoWorldSeed = (long) "North Carolina".hashCode();
 
-public static final boolean mainMenuEnableGithubButton = false;
+public static final boolean mainMenuEnableGithubButton = true;
 
 public static final boolean forceDemoMode = false;
 

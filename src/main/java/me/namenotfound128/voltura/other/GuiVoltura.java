@@ -9,7 +9,7 @@ public class GuiVoltura extends GuiScreen {
    @Override
     public void drawScreen(int mx, int my, float pt) {
         this.drawDefaultBackground();
-this.drawCenteredString(this.fontRendererObj, "We got left hand and Keystrokes", this.width / 2, this.height / 15, -1);
+this.drawCenteredString(this.fontRendererObj, "We got left hand, Keystrokes and more to come.", this.width / 2, this.height / 15, -1);
 
     }
     
